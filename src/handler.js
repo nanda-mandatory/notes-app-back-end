@@ -20,7 +20,7 @@ const addNoteHandler = (request, h) => {
     if (isSuccess) {
         const response = h.response({
             status: 'success',
-            message: 'Success create noted!',
+            message: 'Success create new noted!',
             data: {
             noteId: id,
         },
@@ -37,7 +37,7 @@ const addNoteHandler = (request, h) => {
 };
 
 const getAllNoteHandler = ()=>({
-    status: 'success',
+    status: 'success get all notes!!',
     data:{
         notes,
     },
@@ -50,7 +50,7 @@ const getNoteByIdHandler = (request, h) => {
 
     if (note !== undefined) {
         return {
-            status: 'success',
+            status: 'success get note by id!!',
             data: {
                 note,
             },
@@ -58,7 +58,7 @@ const getNoteByIdHandler = (request, h) => {
     }
     const response = h.response({
         status: 'fail',
-        message: 'Cant find note!!',
+        message: 'Cant find note !!',
     });
     response.code(404);
     return response;
@@ -83,7 +83,7 @@ const editNoteByIdHandler = (request,h)=>{
 
         const response = h.response({
             status: 'success',
-            message: 'Update Success !',
+            message: 'Update Note Success !',
         });
         response.code(200);
         return response;
